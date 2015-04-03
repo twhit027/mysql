@@ -2,6 +2,7 @@ mysql_service 'default' do
   port '3306'
   version '5.5'
   initial_root_password 'change me'
+  socket_file '/var/lib/mysql/mysql.sock'
   action [:create, :start]
 end
 
