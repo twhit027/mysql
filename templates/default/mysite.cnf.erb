@@ -1,54 +1,54 @@
-# Chef generated my.cnf for instance mysql-<%= node['mysql']['name'] %>
+# Chef generated my.cnf for instance mysql-<%= @name %>
 
 [client]
-<% if node['mysql']['charset'] %>
-default-character-set          = <%= node['mysql']['charset'] %>
+<% if @charset %>
+default-character-set          = <%= @charset %>
 <% end %>
-<% if node['mysql']['port'] %>
-port                           = <%= node['mysql']['port'] %>
+<% if @port %>
+port                           = <%= @port %>
 <% end %>
-<% if node['mysql']['socket_file'] %>
-socket                         = <%= node['mysql']['socket_file'] %>
+<% if @socket_file %>
+socket                         = <%= @socket_file %>
 <% end %>
 
 [mysql]
-<% if node['mysql']['charset'] %>
-default-character-set          = <%= node['mysql']['charset'] %>
+<% if @charset %>
+default-character-set          = <%= @charset %>
 <% end %>
 
 [mysqld]
-<% if node['mysql']['run_user'] %>
-user                           = <%= node['mysql']['run_user'] %>
+<% if @run_user %>
+user                           = <%= @run_user %>
 <% end %>
-<% if node['mysql']['pid_file'] %>
-pid-file                       = <%= node['mysql']['pid_file'] %>
+<% if @pid_file %>
+pid-file                       = <%= @pid_file %>
 <% end %>
-<% if node['mysql']['socket_file'] %>
-socket                         = <%= node['mysql']['socket_file'] %>
+<% if @socket_file %>
+socket                         = <%= @socket_file %>
 <% end %>
-<% if node['mysql']['bind_address'] %>
-bind-address                   = <%= node['mysql']['bind_address'] %>
+<% if @bind_address %>
+bind-address                   = <%= @bind_address %>
 <% end %>
-<% if node['mysql']['port'] %>
-port                           = <%= node['mysql']['port'] %>
+<% if @port %>
+port                           = <%= @port %>
 <% end %>
-<% if node['mysql']['data_dir'] %>
-datadir                        = <%= node['mysql']['data_dir'] %>
+<% if @data_dir %>
+datadir                        = <%= @data_dir %>
 <% end %>
-<% if node['mysql']['tmp_dir'] %>
-tmpdir                         = <%= node['mysql']['tmp_dir'] %>
+<% if @tmp_dir %>
+tmpdir                         = <%= @tmp_dir %>
 <% end %>
-<% if node['mysql']['lc_messages_dir'] %>
-lc-messages-dir                = <%= node['mysql']['lc_messages_dir'] %>
+<% if @lc_messages_dir %>
+lc-messages-dir                = <%= @lc_messages_dir %>
 <% end %>
-<% if node['mysql']['error_log'] %>
-log-error                      = <%= node['mysql']['error_log'] %>
+<% if @error_log %>
+log-error                      = <%= @error_log %>
 <% end %>
-<% if node['mysql']['include_dir'] %>
-!includedir <%= node['mysql']['include_dir'] %>
+<% if @include_dir %>
+!includedir <%= @include_dir %>
 <% end %>
 
 [mysqld_safe]
-<% if node['mysql']['socket_file'] %>
-socket                         = <%= node['mysql']['socket_file'] %>
+<% if @socket_file %>
+socket                         = <%= @socket_file %>
 <% end %>
